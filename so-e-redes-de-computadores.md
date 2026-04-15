@@ -1,7 +1,5 @@
 # Sistemas Operacionais e Redes de Computadores
 
-## 
-
 ### Definições:
 
 *Sistema Operacional:* é o software de sistema mais importante do computador. Ele se posiciona entre o hardware e o usuário, gerenciando todos os recursos e fornecendo uma base para a execução de programas. Coração: Kernel - responsável por gerenciamento de processos, memória e drivers de dispositivo (falar com o hardware - teclado, mouse, etc)
@@ -49,6 +47,8 @@ Por exemplo, como o Linux é preemptivo, se meu código Flask entrar em loop inf
 [ ] Um processo pode estar em apenas dois estados: "executando" ou "esperando".
 [ ] Um processo em estado "pronto" está apto para executar, mas aguarda ser escalonado.
 
+*Obs: a última opção também está tecnicamente correta... *
+
  2. Em relação ao conceito de processo, é correto afirmar: 
 
  [ ] Um processo é equivalente a um programa armazenado em disco.
@@ -59,16 +59,16 @@ Por exemplo, como o Linux é preemptivo, se meu código Flask entrar em loop inf
  3. Sobre o estado dos processos, assinale a correta:
 
 [ ] Um processo pode estar em apenas dois estados: "executando" ou "esperando".
-[ ] Um processo em estado "pronto" está apto para executar, mas aguarda ser escalonado.
+**[ X ] Um processo em estado "pronto" está apto para executar, mas aguarda ser escalonado.**
 [ ] Um processo em estado "bloqueado" está sendo executado pela CPU.
 [ ] O estado "suspenso" indica que o processo foi finalizado com sucesso.
 
 4. O que é o escalonamento de processos? 
 
 [ ] A técnica de liberar memória RAM para novos programas.
-[ ] O método de determinar qual processo terá acesso à CPU.
+**[ X ] O método de determinar qual processo terá acesso à CPU.**
 [ ] A reorganização dos arquivos no sistema de arquivos.
-**[ X ] A execução paralela de um mesmo processo em várias CPUs.**
+[ ] A execução paralela de um mesmo processo em várias CPUs.
 
 ### Questão 1 - Processos e programas:  Em que aspectos os programas do desenvolvedor tornam-se processos eficientes?
  
