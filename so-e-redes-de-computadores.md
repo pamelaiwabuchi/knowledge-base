@@ -41,11 +41,11 @@ Por exemplo, como o Linux é preemptivo, se meu código Flask entrar em loop inf
 ## Perguntas para fixação:
 
  1. Sobre a definição de um sistema operacional, é correto afirmar que: 
-[ ] É um software de aplicação utilizado para escrever programas em linguagem de alto nível.
-**[ X ] Atua como intermediário entre o hardware e os programas de aplicação.**
-[ ] Não interfere na gestão de recursos como memória e CPU.
-[ ] Um processo pode estar em apenas dois estados: "executando" ou "esperando".
-[ ] Um processo em estado "pronto" está apto para executar, mas aguarda ser escalonado.
+[ ] É um software de aplicação utilizado para escrever programas em linguagem de alto nível.  
+**[ X ] Atua como intermediário entre o hardware e os programas de aplicação.**  
+[ ] Não interfere na gestão de recursos como memória e CPU.  
+[ ] Um processo pode estar em apenas dois estados: "executando" ou "esperando".  
+[ ] Um processo em estado "pronto" está apto para executar, mas aguarda ser escalonado.  
 
 *Obs: a última opção também está tecnicamente correta... *
 
