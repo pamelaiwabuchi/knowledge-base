@@ -3,7 +3,7 @@ Dica: usuários Linux não precisam fazer a instalação do `bitvise`. Basicamen
 
 # Preparação e instalação
 
-1. Conectar com o banco (copiar e colar do site da aba Cliente SSH)
+1. Conectar com o banco (copiar e colar do site da aba Cliente SSH se Linux. Se Windows logar com bitvise)
 
 2. Se Linux:  Alterar permissões de acesso ao arquivo de chave privada para o nível mais restrito exigido pelo protocolo SSH com o comando:
 
@@ -64,6 +64,48 @@ Agora vamos:
 3. Abertura de Sockets: O MySQL abre uma porta de comunicação para aceitar conexões. Sem o serviço estar 'iniciado', qualquer tentativa de conexão via aplicação (PHP, Python, Java) ou terminal resultará no erro `ERROR 2002 (HY000): Can't connect to local MySQL server though socket`.
 4. Verificação de INtegridade: Ele verifica se os arquivos de log e tabelas não estão corrompidos antes de permitir o acesso aos dados.
 Um *daemon* 
+
+1. sudo apt update
+2. sudo apt-cache search mysql-server
+3. sudo apt install mysql-server-8.0
+4. sudo /etc/init.d/mysql status
+5. sudo apt install net-tools -y
+6. netstat -ant
+7. sudo /etc/init.d/mysql start
+8. sudo su - não vai pedir senha
+9. mysql -u root -p - ele vai pedir senha. é so da enter de novo.
+10. exit (para sair do mysql e voltar)
+11. cd /etc/mysql
+12. cd mysql.conf.d - com d é o de servidor - com dymo.
+13. /etc/mysql/mysql.conf.d
+14. nano mysqld.cnf
+15. alterar a linha de bind Address de 127.0.0.1 para 0.0.0.0
+16. alterar a linha de mysqlx-bind-address para 0.0.0.0
+17. Salvar Ctrl + O
+18. Sair ctrl + X
+19. para sair: exit
+20. cd /etc/mysql/mysql.conf.d/
+21. mkdir api-flask
+22. git clone https://github.com/jeancosta4/to-do-list.git
+23. ls
+24. cd to-do-list
+25. python3 -m venv venv
+26. . venv/bin/activate
+27. pip install -r requirements.txt
+28. pip freeze
+29. pip install flask pymysql
+30. pip freeze > req.txt - cria o arquivo com a saída do comando freeze, que mostra todas as bibliotecas que voce tem instaladas. isso serve pra qualquer pessoa conseguir replicar seu ambiente e conseguir rodar seu projeto/programa
+31. cat req.txt
+
+Prof vai incrementar to-do-list com mysql pra próxima aula.
+.env - arquivo que cria dentro do git e coloca no .gitignore para colocar usuario, senha, database, etc. 
+
+
+O mySQL possui o usuário root como padrão. Não tem senha. Através do root criamos usuários, pois esses usuários secundários nao tem acesso total ao banco - devemos limitar seu acesso. 
+
+
+
+
 
 
 
